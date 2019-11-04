@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="animation.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+    body, html {
+        height: 100%
+    }
+
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Amatic SC", sans-serif;
+    }
+
+    .menu {
+        display: none
+    }
+
+    .bgimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/w3images/pizza.jpg");
+        min-height: 90%;
+        box-shadow: 5px 5px 3px 1px #999
+    }
+    /*
+        css ToolTip Effects
+    */
+    /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*
+    Mqrque animation effects...
+*/
+    .marquee {
+            height:100px;
+            overflow: hidden;
+            position: relative;
+            background: #fefefe;
+            color:brown;
+            border: 5px solid #4a4a4a;
+        }
+        
+        .marquee p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 100px;
+            text-align: center;
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            -moz-animation: scroll-left 2s linear infinite;
+            -webkit-animation: scroll-left 2s linear infinite;
+            animation: scroll-left 20s linear infinite;
+        }
+        
+        @-moz-keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+            }
+        }
+        
+        @-webkit-keyframes scroll-left {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+        
+        @keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
+</style>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top w3-hide-small">
+        <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+            <a href="#" class="w3-bar-item w3-button">HOME</a>
+            <a href="#menu" class="w3-bar-item w3-button">TYPES OF CSS</a>
+            <a href="#about" class="w3-bar-item w3-button">ABOUT CSS</a>
+             
+
+        </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-padding">
+            <span class="w3-tag w3-xlarge">Styling Made Easy With CSS..</span>
+        </div>
+        <div class="w3-display-middle w3-center">
+            <div class="animation">
+                <p id="error"><br />Cascading<br /><span>Style <br /></span>Sheet</p>
+                <p id="code">C<span>S</span><span>S</span></p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Menu Container -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+        <div class="marquee">
+            <p> TYPES OF  CSS </p>
+        </div>
+
+        <div class="w3-content">
+
+
+            <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">INLINE <div class="tooltip">  CSS<span class="tooltiptext">Cascading Style Sheet</span></div></div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">INTERNAL <div class="tooltip">  CSS<span class="tooltiptext">Cascading Style Sheet</span></div></div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">EXTERNAL <div class="tooltip">  CSS<span class="tooltiptext">Cascading Style Sheet</span></div></div>
+                </a>
+            </div>
+
+            <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+                <h3>Inline CSS every style content is in HTML elements</h3>
+                <h3> It is used for a limited section</h3>
+                <h3> Whenever our requirements are very small we can use inline CSS.</h3>
+
+                <b><strong>  <h4>Dis-Advantage:</h4></strong>  </b>
+                <h3>Time Consuming</h3>
+                <h3>It must be specified on every HTML tag </h3>
+                <h3>The code will be quite large and very complex</h3>
+                <br />
+                <h1>EXAMPLES--<H4>INLINE CSS</H4></h1>
+                <img src="C:\Users\tamilarasi.arasu\source\repos\INLINE.PNG" alt="INLINE IMG" />
+            </div>
+
+            <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+                <h3>
+                    In Internal CSS the style of CSS is specified in the
+                    <head>
+                        section
+                </h3>
+                <h3>It affects all the elements in the body section.</h3>
+                <h3>Internal CSS is used in the condition when we want a style to be used in the complete HTML body</h3>
+                <h3></h3>
+                <img src="C:\Users\tamilarasi.arasu\source\repos\internal.PNG" alt="INTERNAL CSS" />
+            </div>
+
+
+            <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+
+                <h3></h3>
+                <h3>In External CSS we create a .css file and use it in our HTML page as per our requirements</h3>
+                <h3>there is no need to rewrite the CSS style again and again in a complete body of HTML that inherits the property of the CSS file</h3>
+
+                <img src="C:\Users\tamilarasi.arasu\source\repos\EXTERNAL.PNG" alt="EXTERNAL CSS" />
+            </div><br>
+
+        </div>
+    </div>
+
+    <!-- About Container -->
+    <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About CSS..!!</h1>
+            <h6><i>Fun With Coding And Style What Ever U Want!!</i></h6>
+            <p>
+                <H2> CSS stands for <BOLD><i>Cascading Style Sheets</i></BOLD>.</H2>
+                <h2>It is generally used to display HTML in various views.</h2>
+                <h2> It is used to design the view for HTML.</h2>
+                <h2>CSS is a combination of a selector and a declaration.</h2>
+                <h2>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</h2>
+                <h2> CSS saves a lot of work.</h2>
+                <h2> It can control the layout of multiple web pages all at once</h2>
+                <h2> layout of multiple web pages all at once</h2>
+                <h1>Selectors And Declarations</h1>
+                <h2>SELECTORS:</h2>
+                <h4>Is a  HTML Tag for Styling..</h4>
+
+                <h2>DECLARATIONS:</h2>
+                <h4>Is a Combination of Property and Values</h4>
+                <span>
+                    <img src="C:\Users\tamilarasi.arasu\source\repos\SD.PNG" alt="image" />
+                </span>
+        </div>
+    </div>
+     
+
+
+    <!-- Contact -->
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">www.kanini.com</a></p>
+    </footer>
+
+    <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-red";
+        }
+        document.getElementById("myLink").click();
+    </script>
+
+</body>
+</html>
